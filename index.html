@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud System</title>
+    <!-- Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,400;1,500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style/all.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+
+
+</head>
+
+<body>
+
+    <section class="crud">
+        <div class="container">
+            <div class="crud-head text-center py-3">
+                <h1 class="fw-bold display-3">Crud</h1>
+                <p class="fs-5">Create Read Update Delete Search</p>
+            </div>
+
+            <div class="crud-input mx-auto">
+                <input class="form-control px-3 py-2" type="text" name="" id="prodTitle" placeholder="Title">
+
+                <div class="row my-1 align-items-center g-3">
+                    <div class="col-md-3">
+                        <input class="form-control px-3 py-2 rounded-0" type="number" name="" id="prodPrice"
+                            placeholder="Price">
+                    </div>
+                    <div class="col-md-3">
+                        <input class="form-control px-3 py-2 rounded-0" type="number" name="" id="prodTaxes"
+                            placeholder="Taxes">
+                    </div>
+                    <div class="col-md-3">
+                        <input class="form-control px-3 py-2 rounded-0" type="number" name="" id="prodDiscount"
+                            placeholder="Discount">
+                    </div>
+                    <div class="col-md-3">
+                        <p class="py-2">Total : <span id="total" class="total fw-bold">0</span></p>
+                      
+                    </div>
+                </div>
+
+                <input class="form-control px-3 py-2 mt-3" type="text" name="" id="category" placeholder="Category">
+                <input class="form-control px-3 py-2 mt-3" type="number" name="" id="count" placeholder="Count">
+
+
+                <button class="btn form-control my-3" id="addProduct">Create</button>
+                <button class="btn form-control my-3 d-none bg-primary" id="updateProduct">Update</button>
+
+
+                <input class="form-control px-3 py-2" type="search" name="" id="search" placeholder="Search ...">
+                <div class="searchOption d-flex justify-content-between">
+                <button id="sByTit" value="title" class="btn px-4 my-3">Search By Title</button>
+                <button id="sByCat" value="category" class="btn px-4 my-3">Search By Category</button>
+
+                </div>
+                <button class="btn form-control d-none" id="deleteAll">Delete All (<span id="totalProd"></span>)</button>
+
+            </div>
+
+            <div class="crud-output mx-auto">
+
+                <table class="text-center w-100 my-4">
+                    <thead >
+                        <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Taxes</th>
+                        <th>Discount</th>   
+                        <th>Total</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tbody">
+                
+
+                    </tbody>
+                </table>
+
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

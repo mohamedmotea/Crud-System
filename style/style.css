@@ -1,0 +1,76 @@
+:root {
+    --darkColor:#222831;
+    --seColor:#393E46;
+    --beColor:#B55400;
+    --eeColor:#EEEEEE;
+    --halfColor:#525252;
+    --textColor:#d2cbcbe4;
+}
+body{
+    
+    background-color: var(--darkColor);
+    color:var(--textColor);
+    font-family: 'Roboto', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--seColor);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--darkColor);
+}
+p {
+    margin: 0;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+.crud input {
+    border: none;
+    color:var(--textColor);
+    background-color: var(--seColor);
+
+}
+.crud input:focus{
+    border: none;
+    color:var(--textColor);
+    background-color: var(--seColor);
+}
+.crud input::placeholder{
+    color:#666
+}
+.totalBox p {
+    color:#666;
+}
+.totalBox .total {
+    color:var(--textColor)
+}
+
+.crud .crud-input button{
+    background-color: var(--beColor);
+    color:var(--textColor);
+    transition:background .3s;
+    -webkit-transition:background .3s;
+    -moz-transition:background .3s;
+    -ms-transition:background .3s;
+    -o-transition:background .3s;
+}
+.crud .crud-input button:hover{
+    background-color: #c0600c;
+}
+.crud .crud-output button {
+    color:var(--textColor)
+}
+
+@media screen and (min-width:1100px) {
+    .searchOption button{
+        width: 25%;
+    }
+}
